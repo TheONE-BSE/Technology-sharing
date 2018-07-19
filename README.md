@@ -11,6 +11,4 @@
 
 ## 现有分享
 
-1. [Node.js入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Node.js%E5%85%A5%E9%97%A8)
-
-待续。。
+1. [Node.js入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Node.js%E5%85%A5%E9%97%A8) 孙兆鹏
