@@ -4,12 +4,25 @@
 
 1. 按照技术分享名称在库中创建目录
 2. 目录中资源存放规则：
-  * 相关文章或ppt放在外层
-  * 相关示例代码建立code目录存放
-  * 其他资源（如多媒体资源等）建立相应目录存放
-  * 如有相关资料、介绍、链接可在资源目录下建立readme.md markdown进行链接或说明
+    * 相关文章或ppt放在外层
+    * 相关示例代码建立code目录存放
+    * 其他资源（如多媒体资源等）建立相应目录存放
+    * 如有相关资料、介绍、链接可在资源目录下建立readme.md markdown进行链接或说明
 
-## 现有分享
+## 提交方法
+
+1. 将本git库fork到自己的地盘下。
+2. 将自己fork来的git库clone到你的本地硬盘上。
+3. 进入Technology-sharing文件夹，按照存放规则操作。
+4. **在每次push以前，请首先同步最新的改动，否则可能会在pull request的时候出现冲突。所有冲突请在本地解决，有冲突的pull request将被打回。**
+5. 同步父git库的方法：
+
+	  1. 在自己的本地，执行`git remote add upstream https://github.com/Kinice/SA-Studio.git`。(在你的git库中引入主git库的源，`upstream`是给这个源取的名字)
+	  2. 每次要同步的时候，执行`git fetch upstream`，`git merge upstream/master`，有冲突解决冲突。（也可以直接用git pull upstream master）
+6. 将改动push到你的远程仓库。
+7. 在自己地盘的此git库中，点击new pull request，说明分享内容，提交，等待内容审核。没有意义的更新内容将被废弃！
+
+## 分享列表
 
 1. [Node.js入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Node.js%E5%85%A5%E9%97%A8) 孙兆鹏
-2. [小程序入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8)苏雪枫
+2. [小程序入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8) 苏雪枫
