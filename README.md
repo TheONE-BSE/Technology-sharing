@@ -12,3 +12,4 @@
 ## 现有分享
 
 1. [Node.js入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Node.js%E5%85%A5%E9%97%A8) 孙兆鹏
+2. [小程序入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8)苏雪枫
