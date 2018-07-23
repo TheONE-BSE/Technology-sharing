@@ -17,7 +17,7 @@
 4. **在每次push以前，请首先同步最新的改动，否则可能会在pull request的时候出现冲突。所有冲突请在本地解决，有冲突的pull request将被打回。**
 5. 同步父git库的方法：
 
-	  1. 在自己的本地，执行`git@github.com:TheONE-BSE/Technology-sharing.git`。(在你的git库中引入主git库的源，`upstream`是给这个源取的名字)
+	  1. 在自己的本地，执行`git remote add upstream git@github.com:TheONE-BSE/Technology-sharing.git`。(在你的git库中引入主git库的源，`upstream`是给这个源取的名字)
 	  2. 每次要同步的时候，执行`git fetch upstream`，`git merge upstream/master`，有冲突解决冲突。（也可以直接用git pull upstream master）
 6. 将改动push到你的远程仓库。
 7. 在自己地盘的此git库中，点击new pull request，说明分享内容，提交，等待内容审核。没有意义的更新内容将被废弃！
