@@ -27,3 +27,4 @@
 1. [Node.js入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Node.js%E5%85%A5%E9%97%A8) 孙兆鹏
 2. [小程序入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8) 苏雪枫
 3. [算法与数据结构入门](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%85%A5%E9%97%A8) 李忠帅
+4. [前端笔试题2.0](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AF%95%E9%A2%982.0) 孙兆鹏 & All（感谢大家）
