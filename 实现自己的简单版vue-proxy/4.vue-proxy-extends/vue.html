@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>vue-proxy-extends</title>
+  <!--<script src="my-vue.js" charset="utf-8"></script>-->
+  <script>
+    // class Ass extends Proxy{}
+    // Uncaught TypeError: Class extends value does not have valid prototype property undefined
+
+    // console.log(Object.prototype);
+    // console.log(Array.prototype);
+    // console.log(Proxy.prototype);
+
+    Proxy.prototype = Object.prototype
+    class Ass extends Proxy{
+      constructor(){
+        super({},{
+          get(target,key){
+            console.log(target,key);
+          }
+        })
+      }
+    }
+    let a = new Ass();
+    a.num;
+
+  </script>
+</head>
+<body>
+<div id="box">{{a}}</div>
+</body>
+</html>

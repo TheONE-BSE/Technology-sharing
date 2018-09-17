@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let json = {a:12,b:5}
+  let p = new Proxy(json,{ 
+    get(target,key,proxy){
+      console.log(target,key,proxy);
+      // alert('有人获取东西')
+
+      if(key in target){
+        return target[key];
+      }else{
+        // return ''  // 对页面友好显示
+        // 或者直接报错
+        // throw new Error('no this key')
+      }
+    },
+    set(){
+      alert('有人要设置东西');
+    }
+  })
+  alert(p.a)
+  alert(p.b)
+  alert(p.c)
+</script>
+</body>
+</html>

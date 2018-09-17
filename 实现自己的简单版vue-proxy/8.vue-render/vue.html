@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>vue-render</title>
+  <script src="my-vue.js" charset="utf-8"></script>
+  <script>
+    window.onload=function (){
+      let vm=new MyVue({
+        el: '#box',
+        data: {name: 'cuijianjun',age:18,a:12,b:5}
+      });
+    };
+  </script>
+</head>
+<body>
+<!--<div id="box" :title="b">{{a}}</div>-->
+<div id="box">
+    <div>我叫{{name}}，我今年{{age}}}岁</div>
+  <div>{{a+b}}</div>
+</div>
+</body>
+</html>

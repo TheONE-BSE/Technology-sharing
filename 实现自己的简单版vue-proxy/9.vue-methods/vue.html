@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>vue-render</title>
+  <script src="my-vue.js" charset="utf-8"></script>
+  <script>
+    window.onload=function (){
+      let vm=new MyVue({
+        el: '#box',
+        data: {name: 'cuijianjun',age:18,a:12,b:5},
+        methods:{
+          fn(){
+            alert('abc')
+          }
+        }
+      });
+    };
+  </script>
+</head>
+<body>
+<!--<div id="box" :title="b">{{a}}</div>-->
+<div id="box" :title="b">
+    <div :title="name">我叫{{name}}，我今年{{age}}岁</div>
+    <div>{{a+b}}</div>
+    <input type="button" value="按钮" @click="fn">
+</div>
+</body>
+</html>
