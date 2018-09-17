@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+    let json={a: 12, b: 5};
+
+    //复制一份
+    let _old_json={};
+
+    for(var name in json){
+      _old_json[name]=json[name];
+    }
+
+
+    //...
+    // json.a=77;
+    //...
+    delete json.b;
+    //...
+    json.c=55;
+
+    //脏检查 --$apply  (angular)
+    //修改
+    //添加
+    //删除
+    for(var name in _old_json){
+      if(!json[name]){                            //删除
+        alert('删掉了: '+name);
+      }else if(json[name]!=_old_json[name]){      //修改
+        alert('修改了: '+name+',原来:'+_old_json[name]+',新的:'+json[name]);
+      }
+    }
+
+    for(var name in json){
+      if(!_old_json[name]){                       //添加
+        alert('添加了: '+name);
+      }
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // es7
+  let json = {}
+  Object.observe(json,()=>{
+    alert('数据变化了')
+  })
+//https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
+  json.a = 12
+</script>
+</body>
+</html>

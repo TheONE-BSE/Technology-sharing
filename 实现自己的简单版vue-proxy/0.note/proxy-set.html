@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let json = {}
+  let p = new Proxy(json,{ // 整个vue的核心   computed
+    get(){
+      alert('有人获取东西')
+    },
+    set(target,key,val,proxy){
+      //console.log(target,key,val,proxy);
+      if(val>0 && val<100){
+        target[key] = val;
+      }else{
+        throw new Error('invaild value,only accept 0 -- 100')
+      }
+    },
+    has(){
+
+    },
+    deleteProperty(){
+
+    }
+  })
+
+  //p.a = 77
+  p.a = 105
+  // alert(p.a)
+</script>
+</body>
+</html>

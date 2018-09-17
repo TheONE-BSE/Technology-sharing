@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let json = {}
+  let p = new Proxy(json,{ // 整个vue的核心   computed
+    get(){
+      alert('有人获取东西')
+    },
+    set(){
+      alert('有人要设置东西');
+    }
+  })
+  alert(p.a =2)
+</script>
+</body>
+</html>
