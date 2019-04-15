@@ -31,4 +31,5 @@
 5. [实现自己的简单版vue-proxy](https://github.com/TheONE-BSE/Technology-sharing/tree/master/%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AE%80%E5%8D%95%E7%89%88vue-proxy) 崔健军
 6. git基础（暂无课件） 孙兆鹏
 7. [计算机网络基础](https://github.com/TheONE-BSE/Technology-sharing/tree/master/计算机网络原理) 孙兆鹏
+8. [Grid布局指南](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Grid%E5%B8%83%E5%B1%80) 潘禹行
 
