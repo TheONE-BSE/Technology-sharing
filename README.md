@@ -33,4 +33,5 @@
 7. [计算机网络基础](https://github.com/TheONE-BSE/Technology-sharing/tree/master/计算机网络原理) 孙兆鹏
 8. [Grid布局指南](https://github.com/TheONE-BSE/Technology-sharing/tree/master/Grid%E5%B8%83%E5%B1%80) 潘禹行
 9. [React初探](https://github.com/TheONE-BSE/Technology-sharing/tree/master/React%E5%88%9D%E6%8E%A2) 王彦峰
+10. [浅谈canvas](https://github.com/TheONE-BSE/Technology-sharing/tree/master/浅谈canvas) 李忠帅
 
