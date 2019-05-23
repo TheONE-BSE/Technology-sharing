@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>circle</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #aaa; display: block; margin: 50px auto;">
+    不支持canvas
+  </canvas>
+
+  <script>
+    window.onload = function() {
+      let canvas = document.getElementById('canvas')
+
+      let context = canvas.getContext('2d')
+
+      context.beginPath()
+      context.lineWidth = 5
+      context.strokeStyle = '#000000'
+      context.arc(300, 300, 200, 0, 0.5 * Math.PI, true)
+      context.fillStyle = 'red'
+      context.fill()
+      context.closePath()
+
+      context.beginPath()
+      context.moveTo(390, 410)
+      context.lineTo(480, 520)
+      context.lineTo(520, 480)
+      context.lineTo(410, 390)
+      context.fillStyle = 'green'
+      context.fill()
+      context.closePath()
+
+      context.stroke()
+    }
+  </script>
+</body>
+</html>

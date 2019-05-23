@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ball_jump</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #aaa; display: block; margin: 50px auto;">
+    不支持canvas
+  </canvas>
+
+  <script>
+    let ball = { x: 512, y: 100, r: 10, g: 2, vx: -1, vy: -1, color: '#005588'}
+
+    window.onload = function() {
+
+      let canvas = document.getElementById('canvas')
+      let context = canvas.getContext('2d')
+      console.log(context)
+
+      setInterval(() => {
+        render(context)
+        update(context)
+      }, 5)
+    }
+
+    function update(cxt) { // 运动路径
+      ball.x += ball.vx
+      ball.y += ball.vy
+      // ball.vy += ball.g
+
+      if (ball.y >= cxt.canvas.height - ball.r) {
+        ball.y = cxt.canvas.height - ball.r
+        ball.vy = - ball.vy * 0.6
+      }
+      if (ball.y <= ball.r) {
+        ball.y = ball.r
+        ball.vy = - ball.vy
+      }
+      if (ball.x >= cxt.canvas.width - ball.r) {
+        ball.x = cxt.canvas.width - ball.r
+        ball.vx = - ball.vx
+      }
+      if (ball.x <= ball.r) {
+        ball.x = ball.r
+        ball.vx = - ball.vx
+      }
+    }
+
+    function render(cxt) {
+      cxt.clearRect(0, 0, cxt.canvas.width, cxt.canvas.height)
+
+      cxt.fillStyle = ball.color
+      cxt.beginPath()
+      cxt.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI)
+      cxt.closePath()
+
+      cxt.fill()
+    }
+  </script>
+</body>
+</html>
