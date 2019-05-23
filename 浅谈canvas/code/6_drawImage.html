@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>drawImage</title>
+  <style>
+    .canvas {
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="imgCover" src="./img/1.jpg">
+  <canvas id="canvas" class="canvas"></canvas>
+  <script>
+    window.onload = function() {
+      let canvas = document.getElementById('canvas')
+      // canvas.width = 800
+      // canvas.height = 800
+      let context = canvas.getContext('2d')
+      let image = document.getElementById('imgCover')
+      // context.drawImage(image, 0, 0)
+      // context.drawImage(image, 10, 10)
+      // context.drawImage(image, 0, 0, 300, 150)
+      context.drawImage(image, 0, 42, 500, 250, 0, 0, 300, 150)
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>triangle</title>
+  <style>
+    .canvas {
+      border: 1px solid #aaa;
+      /* display: block; */
+      /* margin: 50px auto; */
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" class="canvas" width="1024" height="768">
+    不支持canvas
+  </canvas>
+  <!-- <span>555</span> -->
+
+  <script>
+    window.onload = function() {
+      let canvas = document.getElementById('canvas')
+
+      // canvas.width = 800
+      // canvas.height = 800
+
+
+      let context = canvas.getContext('2d') // CanvasRenderingContext2D对象
+
+      context.moveTo(100, 100)
+      context.lineTo(700, 700)
+      context.lineTo(100, 700)
+      context.lineTo(100, 100)
+      context.lineWidth = 5
+      context.strokeStyle = '#005588'
+
+      context.fillStyle = 'rgb(2, 100, 3)'
+      context.fill()
+
+      // context.stroke()
+    }
+  </script>
+</body>
+</html>

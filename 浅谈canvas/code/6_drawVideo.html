@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>drawVideo</title>
+  <style>
+    .canvas {
+      display: block;
+      border: 1px solid #333;
+      margin-top: 10px;
+    }
+    .ui-button {
+      border: 1px solid #2486ff;
+      background-color: #2486ff;
+      padding: 8px 15px;
+      color: #fff;
+      border-radius: 3px;
+    }
+    .ui-button:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <video id="video" width="640" height="360" autoplay autobuffer muted controls>
+    <source src="./img/2.mp4" type="video/mp4">
+  </video>
+  <br>
+  <input type="button" id="button" class="ui-button" value="截取视频">
+  <canvas id="canvas" class="canvas"></canvas>
+  <script>
+    window.onload = function() {
+      let canvas = document.getElementById('canvas')
+      canvas.width = 640
+      canvas.height = 360
+      let context = canvas.getContext('2d')
+      let video = document.getElementById('video')
+      let button = document.getElementById('button')
+      button.addEventListener('click', function () {
+        context.clearRect(0, 0, 640, 360)
+        context.drawImage(video, 0, 0, 640, 360)
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tangram</title>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px solid #aaa; display: block; margin: 50px auto;">
+    不支持canvas
+  </canvas>
+
+  <script>
+    let target = [
+      {
+        p: [{x: 0, y: 0}, {x: 800, y: 0}, {x: 400, y: 400}],
+        color: 'red'
+      },
+      {
+        p: [{x: 0, y: 0}, {x: 400, y: 400}, {x: 0, y: 800}],
+        color: 'blue'
+      },
+      {
+        p: [{x: 800, y: 0}, {x: 800, y: 400}, {x: 600, y: 600}, {x: 600, y: 200}],
+        color: 'green'
+      },
+      {
+        p: [{x: 600, y: 200}, {x: 600, y: 600}, {x: 400, y: 400}],
+        color: 'purple'
+      },
+      {
+        p: [{x: 400, y: 400}, {x: 600, y: 600}, {x: 400, y: 800}, {x: 200, y: 600}],
+        color: 'yellow'
+      },
+      {
+        p: [{x: 200, y: 600}, {x: 400, y: 800}, {x: 0, y: 800}],
+        color: 'orange'
+      },
+      {
+        p: [{x: 800, y: 400}, {x: 800, y: 800}, {x: 400, y: 800}],
+        color: 'pink'
+      }
+    ]
+    window.onload = function() {
+      let canvas = document.getElementById('canvas')
+
+      canvas.width = 800
+      canvas.height = 800
+
+
+      let context = canvas.getContext('2d')
+
+      for (let i in target) {
+        draw(target[i], context)
+      }
+    }
+
+    function draw(piece, cxt) {
+      cxt.beginPath()
+      cxt.moveTo(piece.p[0].x, piece.p[0].y)
+      for (let j in piece.p) {
+        cxt.lineTo(piece.p[j].x, piece.p[j].y)
+      }
+      cxt.closePath()
+
+      cxt.fillStyle = piece.color
+      cxt.fill()
+
+      // cxt.strokStyle = 'black'
+      // cxt.lineWidth = 5
+      // cxt.stroke()
+    }
+  </script>
+</body>
+</html>
